@@ -5,7 +5,10 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    port: 8888
+    port: 8888,
+    proxy: {
+      '/upload': 'http://localhost:8889',
+    },
   },
   plugins: [react()],
   resolve: {

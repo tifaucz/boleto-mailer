@@ -1,9 +1,10 @@
 {
-  "name": "kanastra-challenge-boilerplate",
+  "name": "bun-boleto-mailer",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.1",
   "scripts": {
-    "dev": "concurrently --kill-others \"bun run tailwindcss --watch\" \"vite\"",
+    "dev": "concurrently --kill-others \"bun run tailwindcss --watch\" \"vite\" \"bun run dev:backend\"",
+    "dev:backend": "bun run src/server.ts",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "tailwindcss": "tailwindcss -i ./src/global.css -o ./dist/index.css",
     "build": "tsc && vite build && bun run tailwindcss",
@@ -12,10 +13,12 @@
     "build:node": "tsc && vite build && npm run tailwindcss"
   },
   "dependencies": {
+    "@types/nodemailer": "^6.4.14",
     "autoprefixer": "^10.4.16",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "concurrently": "^8.2.2",
+    "nodemailer": "^6.9.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
@@ -29,6 +32,7 @@
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
     "@vitejs/plugin-react": "^4.0.0",
+    "bun-types": "^1.0.29",
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
