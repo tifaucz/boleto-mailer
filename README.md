@@ -45,6 +45,9 @@ You need to install bun
 
 The API will be available on http://localhost:8888 and the backend on http://localhost:8889.
 
+### Example email
+![image](https://github.com/tifaucz/boleto-mailer/assets/15833226/bc0344da-ea3d-4ba4-a14f-f7569d83c6bd)
+
 
 ### Issues / TODO
 - [ ] Bun is not reading the.env file, need to debug and check if there is an issue in this version.
